@@ -22,6 +22,9 @@ jobs:
         run: |
           docker build \
             --build-arg BUILD_NUMBER=${{ github.run_id }} \
+            --build-arg TARGETOS=linux \
+            --build-arg TARGETARCH=amd64 \
+            --build-arg BUILD_NUMBER=${{ github.run_id }} \
             -t ghcr.ioReetryyy/focalboard:latest \
             -f docker/Dockerfile \
             .
