@@ -22,7 +22,7 @@ jobs:
         run: |
           docker build \
             --build-arg BUILD_NUMBER=${{ github.run_id }} \
-            -t ghcr.io/<your-username>/<repo-name>:latest \
+            -t ghcr.ioReetryyy/focalboard:latest \
             -f Dockerfile .
 
       - name: Push Docker image
